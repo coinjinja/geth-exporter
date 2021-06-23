@@ -1,4 +1,4 @@
-module github.com/ethereum/geth-exporter
+module github.com/coinjinja/geth-exporter
 
 go 1.16
 
