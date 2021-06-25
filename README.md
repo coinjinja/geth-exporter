@@ -1,4 +1,4 @@
-# geth-exporter
+# geth_exporter
 
 ```
 promu crossbuild
