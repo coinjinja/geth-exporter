@@ -44,8 +44,8 @@ func ToEther(o *big.Int) *big.Float {
 func MetricsHttp(w http.ResponseWriter, r *http.Request) {
 	var allOut []string
 	block_number, timestamp := CurrentBlock()
-	allOut = append(allOut, fmt.Sprintf("eth_block_number{geth_name=\"%v\"} %v", name, block_number))
-	allOut = append(allOut, fmt.Sprintf("eth_block_timestamp{geth_name=\"%v\"} %v", name, timestamp))
+	allOut = append(allOut, fmt.Sprintf("geth_block_number{geth_name=\"%v\"} %v", name, block_number))
+	allOut = append(allOut, fmt.Sprintf("geth_block_timestamp{geth_name=\"%v\"} %v", name, timestamp))
 	fmt.Fprintln(w, strings.Join(allOut, "\n"))
 	// https://github.com/ethereum/go-ethereum/blob/master/core/types/block.go
 }
